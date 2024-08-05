@@ -2,7 +2,7 @@ import telebot # type: ignore
 from extensions import APIException, CurrencyConverter
 import configparser
 
-bot = telebot.TeleBot('7484500925:AAEFRewv25yYgcJoYtFxrzcQK9Vdse1DazY')
+bot = telebot.TeleBot('7484500925:key')
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
