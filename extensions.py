@@ -27,7 +27,7 @@ class CurrencyConverter:
             amount = float(amount)
         except ValueError:
             raise APIException('Incorrect value amount.')
-        r = requests.get(f'https://v6.exchangerate-api.com/v6/0c345af3d6e93e952c89a366/pair/{base_key}/{quote_key}/{amount}')
+        r = requests.get(f'https://v6.exchangerate-api.com/apikey/pair/{base_key}/{quote_key}/{amount}')
         resp = json.loads(r.content)
         rate=resp["conversion_rate"]
         result = rate * amount
